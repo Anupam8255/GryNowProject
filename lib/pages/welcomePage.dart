@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -70,6 +71,9 @@ class WelcomePage extends StatelessWidget {
               ],
               
             ),
+            Container(
+              child: GoogleMap(initialCameraPosition: CameraPosition(target: LatLng(31.217550, 75.769012))),
+            )
           ],
         ),
       ),
